@@ -9,7 +9,7 @@ module.exports = cat => `
     </head>
     <body>
       <section class="section">
-        <div class="container">
+        <div class="container has-text-centered">
           <h1 class="title">
             Serverless cats!
           </h1>
@@ -19,8 +19,8 @@ module.exports = cat => `
             height="${cat.images.downsized.height}"
             width="${cat.images.downsized.width}"
           />
+          <p class="subtitle">Gifs of kittens are taken from GIPHY.com</p>
         </div>
-        <p class="subtitle">Gifs of kittens are taken from GIPHY.com</p>
       </section>
       </body>
     </html>`;

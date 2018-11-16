@@ -1,0 +1,22 @@
+service: serverless-gifs-js
+
+
+custom:
+  environment: ${file(.env.yml):default}
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  environment:
+    GIPHY_API_KEY: ${self:custom.environment.GIPHY_API_KEY}
+
+functions:
+  gifs:
+    handler: handler.gifs
+    events:
+      - http:
+          method: get
+          path: /
+
+
+
